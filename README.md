@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 My Ecommerce Demo (Next.js + Stripe)
 
-## Getting Started
+Welcome to the My Ecommerce Demo Project — a modern, minimal e-commerce website built using Next.js 13, Tailwind CSS, Stripe, and TypeScript (optional). This is a fully functional frontend demo where users can browse products, add them to the cart, and simulate a checkout experience.
 
-First, run the development server:
+> ⚠️ This is a demo project. Do not make real payments. This is meant for learning and showcasing skills only.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 💡 Product listing from Stripe
+- 🛍 Cart functionality using Zustand
+- 📦 Checkout integration with Stripe
+- 🎨 Styled with Tailwind CSS
+- 🧠 React hooks: `useState`, `useEffect`
+- 🧭 Routing with Next.js App Router
+- ⚠️ Demo banner: Scrolling message warns users not to pay
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Tech         | Purpose                      |
+| ------------ | ---------------------------- |
+| Next.js 13   | React Framework (App Router) |
+| Tailwind CSS | Utility-first styling        |
+| Stripe API   | Product data & Checkout      |
+| Zustand      | Cart State Management        |
+| TypeScript   | Type Safety (Optional)       |
+| Heroicons    | Modern Icons                 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+├── app/ # Next.js routes
+├── components/ # Reusable UI components
+├── store/ # Zustand cart store
+├── lib/stripe.ts # Stripe configuration
+├── public/ # Static assets
+├── styles/ # Tailwind and globals
+├── .env.local # Environment variables
+├── README.md
+└── ...
 
-## Deploy on Vercel
+## 🚀 Getting Started Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/yourusername/ecommerce-demo.git
+cd ecommerce-demo
+
+Install dependencies
+
+pnpm install # or npm install / yarn install
+Set up .env.local
+
+env
+
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+Run the development server
+
+pnpm dev # or npm run dev / yarn dev
+Visit http://localhost:3000 🎉
+
+✅ To Do
+Add Product Details Page
+
+Create Admin Product Management (optional)
+
+Deploy on Vercel
+
+Add unit tests with Vitest or Jest
+
+📦 Deployment
+This app is ready to deploy on Vercel with environment variables set.
+
+🙋‍♂️ Author
+Made by Tejas Jagdale
+
+📝 License
+This project is open-source and free to use under the MIT License.
+
+⚠️ Disclaimer
+This is a demo project. No real products are being sold. The Stripe integration is in test mode. Do not enter real card details.
